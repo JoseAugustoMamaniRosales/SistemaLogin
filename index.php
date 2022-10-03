@@ -1,4 +1,6 @@
-<html>
+<!doctype html>
+<html lang="en">
+
     <head>
         <title>Sistema de Login</title>
         <meta charset="utf-8">
@@ -8,9 +10,9 @@
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
     </head>
-    <body>
 
-        <div class="container text-center">
+    <body>
+        <div class="container">
 
             <div class="row">
                 <div class="col">
@@ -18,7 +20,7 @@
                         <div class="container-fluid">
                             <a class="navbar-brand" href="#">
                                 <img src="img/bootstrap-logo.svg" alt="" width="30" height="24" class="d-inline-block align-text-top">
-                                 Bootstrap
+                                 Sistema Web 2.0
                             </a>
                         </div>
                     </nav>
@@ -27,19 +29,21 @@
 
             <div class="row">
                 <div class="col">
-                    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+                    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
                         <div class="container-fluid">
-                            <a class="navbar-brand" href="#">Sistema Web 2.0</a>
-                                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                                     <span class="navbar-toggler-icon"></span>
-                                </button>
-                                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                                        <div class="navbar-nav">
-                                            <a class="nav-link active" aria-current="page" href="#">Cadastrar</a>
-                                            <a class="nav-link" href="#">Consultar</a>
-        
-                                        </div>
-                                    </div>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarNav">
+                                <ul class="navbar-nav">
+                                    <li class= "nav-item">
+                                        <a class="nav-link active" aria-current="page" href="#">Cadastro</a>
+                                    </li>
+                                    <li class= "nav-item">
+                                        <a class="nav-link" href="consulta.php">Consulta</a>
+                                    </li>
+                                </ul>
+                            </div>          
                         </div>
                     </nav>
                 </div>
@@ -47,72 +51,107 @@
 
             <div class="row">
                 <div class="col">
-                    
-                    <div class="mb-3">
-                        <label for="exampleFormControlTextarea1" class="form-label">Nome:</label>
-                            <input class="form-control" id="exampleFormControlTextarea1" rows="3"></input>
-                    </div>
-                    <div class="mb-3">
-                        <label for="exampleFormControlTextarea1" class="form-label">Endereço:</label>
-                            <input class="form-control" id="exampleFormControlTextarea1" rows="3"></input>
-                    </div>
-                    <div class="mb-3">
-                        <label for="exampleFormControlTextarea1" class="form-label">Bairro:</label>
-                            <input class="form-control" id="exampleFormControlTextarea1" rows="3"></input>
-                    </div>
-                    <div class="mb-3">
-                        <label for="exampleFormControlTextarea1" class="form-label">Cep:</label>
-                            <input class="form-control" id="exampleFormControlTextarea1" rows="3"></input>
-                    </div>
-                    <div class="mb-3">
-                        <label for="exampleFormControlTextarea1" class="form-label">Cidade:</label>
-                            <input class="form-control" id="exampleFormControlTextarea1" rows="3"></input>
-                    </div>
-                    <div class="mb-3">
-                        <label for="exampleFormControlTextarea1" class="form-label">Estado</label>
-                            <select class="form-select" aria-label="Default select example">
-                                <option selected>Selecione um estado</option>
-                                <option value="1">AC</option>
-                                <option value="2">AL</option>
-                                <option value="3">AP</option>
-                                <option value="4">AM</option>
-                                <option value="5">BA</option>
-                                <option value="6">CE</option>
-                                <option value="7">ES</option>
-                                <option value="8">GO</option>
-                                <option value="9">MA</option>
-                                <option value="10">MT</option>
-                                <option value="11">MS</option>
-                                <option value="12">MG</option>
-                                <option value="13">PA</option>
-                                <option value="14">PB</option>
-                                <option value="15">PR</option>
-                                <option value="16">PE</option>
-                                <option value="17">PI</option>
-                                <option value="18">RJ</option>
-                                <option value="19">RN</option>
-                                <option value="20">RS</option>
-                                <option value="21">RO</option>
-                                <option value="22">RR</option>
-                                <option value="23">SC</option>
-                                <option value="24">SP</option>
-                                <option value="25">SE</option>
-                                <option value="26">TO</option>
-                                <option value="27">DF</option>
-                            </select>
-                    </div>
-                    <div class="mb-3">
-                        <label for="exampleFormControlInput1" class="form-label">Login:</label>
-                            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-                    </div>
-                    <div class="mb-3">
-                        <label for="exampleFormControlTextarea1" class="form-label">Senha:</label>
-                            <input class="form-control" id="exampleFormControlTextarea1" rows="3"></input>
-                    </div>
+                    <nav class="navbar bg-light">
+                        <span class="navbar-brand">Cadastro de Usuários</span>
+                    </nav>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">&nbsp;</div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+
+                        <form class = "row g-3" method="post" action="controller/ControllerCadastro.php">
+                                                              
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="inputEmail" class="form-label">Email</label>
+                                    <input type="email" class="form-control" required name="inputEmail3"id="inputEmail4">
+                                </div>
+                            </div>                              
+
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="inputPassword4" class="form-label">Senha</label>
+                                    <input type="password" class="form-control" required name="inputPassword"id="inputPassword4">
+                                </div>
+                            </div>
+                            
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <label for="inputAddress" class="form-label">Endereço</label>
+                                    <input type="text" class="form-control" name="inputAddress8"id="inputAddress8">
+                                </div>
+                            </div>
+
+                            <div class="col-6">
+                                <div class="form-group">
+                                    <label for="inputAddress2" class="form-label">Bairro</label>
+                                    <input type="text" class="form-control" name = "inputAddress2" required id="txtBairro">
+                                </div>
+                            </div>
+
+                            <div class="col-6">
+                                <div class = "form-group">
+                                    <label for="inputAddress2" class="form-label">CEP</label>
+                                    <input type="text" class="form-control" name="inputAddress3"id="inputAddress2">
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="inputCity" class="form-label">Cidade</label>
+                                    <input type="text" class="form-control" name="inputCity"id="inputCity">
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class = "form-group">
+                                    <label for="inputState" class="form-label">Estado</label>
+                                    <select id="inputState" required name="inputState"class="form-select">
+                                        <option selected>Escolha...</option>
+                                        <option value="1">AC</option>
+                                            <option value="2">AL</option>
+                                            <option value="3">AP</option>
+                                            <option value="4">AM</option>
+                                            <option value="5">BA</option>
+                                            <option value="6">CE</option>
+                                            <option value="7">ES</option>
+                                            <option value="8">GO</option>
+                                            <option value="9">MA</option>
+                                            <option value="10">MT</option>
+                                            <option value="11">MS</option>
+                                            <option value="12">MG</option>
+                                            <option value="13">PA</option>
+                                            <option value="14">PB</option>
+                                            <option value="15">PR</option>
+                                            <option value="16">PE</option>
+                                            <option value="17">PI</option>
+                                            <option value="18">RJ</option>
+                                            <option value="19">RN</option>
+                                            <option value="20">RS</option>
+                                            <option value="21">RO</option>
+                                            <option value="22">RR</option>
+                                            <option value="23">SC</option>
+                                            <option value="24">SP</option>
+                                            <option value="25">SE</option>
+                                            <option value="26">TO</option>
+                                            <option value="27">DF</option>
+                                    </select>
+                                </div>
+                            </div>
+                        
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-dark">Cadastrar</button>
+                            </div>
+                        </form>   
                 </div>
             </div>
 
         </div>
-
+        
     </body>
 </html>
